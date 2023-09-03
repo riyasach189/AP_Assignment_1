@@ -57,4 +57,4 @@ Interactive Menu
 
 - implemented using nested if statements
 - 'choice' is an int with limited range, uncanny values invite errors
-- member has to enter all correct credentials to Enter as a member - increased safety
+- member has to enter all correct credentials to Enter as a member - safety feature

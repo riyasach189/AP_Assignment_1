@@ -54,8 +54,9 @@ public class Member {
         System.out.println("Fine - Rs." + fine);
         System.out.println("Books Issued: ");
         for (Book book : booksIssued) {
-            System.out.println(book + "\n");
+            System.out.println(book);
         }
+        System.out.println("\n");
         return null;
     }
 
@@ -80,7 +81,7 @@ public class Member {
                                 """);
         }
 
-        else if (booksIssued.size() > 2)
+        else if (booksIssued.size() >= 2)
         {
             System.out.print("""
                                 ---------------------------------
@@ -178,13 +179,14 @@ public class Member {
                 returned_book = book;
                 iterator.remove(); // Safe removal using the iterator
                 book.setStatus(false);
-                this.fine += book.calculateFine();
+                int curr_fine = book.calculateFine();
+                this.fine += curr_fine;
 
                 System.out.println("---------------------------------");
                 System.out.println("Book returned successfully.");
 
-                if (this.fine != 0) {
-                    System.out.println("You have a fine of Rs." + this.fine + " for a delay of " + (this.fine/3) + " days.");
+                if (curr_fine != 0) {
+                    System.out.println("You have a fine of Rs." + curr_fine + " for a delay of " + (curr_fine/3) + " days.");
                 }
 
                 System.out.println("---------------------------------");
