@@ -1,4 +1,4 @@
-package library;
+package org.example;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,7 +10,7 @@ public class Member {
     private final long phoneNumber;
     private int age;
     private final int memberID;
-    private final ArrayList<Book> booksIssued;
+    private ArrayList<Book> booksIssued;
     private int fine;
 
     Scanner scanner = new Scanner(System.in);
@@ -50,10 +50,6 @@ public class Member {
     //toString method
     public String toString()
     {
-        for (Book book : booksIssued) {
-            fine += book.calculateFine();
-        }
-
         System.out.println("Name - " + name);
         System.out.println("Fine - Rs." + fine);
         System.out.println("Books Issued: ");
@@ -174,25 +170,6 @@ public class Member {
         }
 
         Book returned_book = null;
-
-//        for (Book book : this.booksIssued) {
-//            if (book.bookID() == bookID) {
-//                returned_book = book;
-//                booksIssued.remove(book);
-//                book.setStatus(false);
-//                this.fine += book.calculateFine();
-//
-//                System.out.println("---------------------------------");
-//                System.out.println("Book returned successfully.");
-//
-//                if (this.fine != 0) {
-//                    System.out.println("You have a fine of Rs." + this.fine + " for a delay of " + (this.fine/3) + "days.");
-//                }
-//
-//                System.out.println("---------------------------------");
-//
-//            }
-//        }
 
         Iterator<Book> iterator = this.booksIssued.iterator();
         while (iterator.hasNext()) {

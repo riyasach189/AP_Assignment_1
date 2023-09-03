@@ -1,4 +1,4 @@
-package library;
+package org.example;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -67,30 +67,6 @@ public class Librarian {
         }
 
         Book removed_book = null;
-
-//        for (Book book : books) {
-//            if (book.bookID() == bookID) {
-//                removed_book = book;
-//
-//                if (!book.getStatus()) {
-//                    books.remove(book);
-//
-//                    System.out.println("---------------------------------");
-//                    System.out.println("Book Removed Successfully!");
-//                    System.out.println("---------------------------------");
-//                }
-//
-//                else
-//                {
-//                    System.out.print("""
-//                    ---------------------------------
-//                    Book is currently issued by someone and cannot be removed.
-//                    ---------------------------------
-//                    """);
-//                }
-//
-//            }
-//        }
 
         Iterator<Book> iterator = books.iterator();
         while (iterator.hasNext()) {
@@ -174,39 +150,6 @@ public class Librarian {
         }
 
         Member removed_member = null;
-
-//        for (Member member : members) {
-//            if (member.memberID() == memberID) {
-//                removed_member = member;
-//
-//                if (member.getFine() != 0)
-//                {
-//                    System.out.print("""
-//                    ---------------------------------
-//                    The member has to clear due fine before being removed.
-//                    ---------------------------------
-//                    """);
-//                }
-//
-//                else if (member.getBooksIssued().size() != 0)
-//                {
-//                    System.out.print("""
-//                    ---------------------------------
-//                    The member has to return all issued books before being removed.
-//                    ---------------------------------
-//                    """);
-//                }
-//
-//                else
-//                {
-//                    members.remove(member);
-//                    System.out.println("---------------------------------");
-//                    System.out.println("Member Removed Successfully!");
-//                    System.out.println("---------------------------------");
-//                }
-//
-//            }
-//        }
 
         Iterator<Member> iterator = members.iterator();
         while (iterator.hasNext()) {
